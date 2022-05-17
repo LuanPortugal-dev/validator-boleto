@@ -3,7 +3,7 @@
 > ## Feature
 <br />
 
-- [] Validar boleto do tipo bancário
+- [x] Validar boleto do tipo bancário
   - [X] Validar o boleto 
   - [X] Validações dos DV 
   - [X] Obter de valor
@@ -13,7 +13,7 @@
 
 <br />
 
-- []  Validar boleto do tipo convênio
+- [x]  Validar boleto do tipo convênio
   - [] Validações do boleto
   - [] Calculo de valor
   - [] Formatar data
