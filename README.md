@@ -21,6 +21,6 @@
 
 <br />
 
-- [] Erro customizado para as validações
+- [X] Erro customizado para as validações
 
 
