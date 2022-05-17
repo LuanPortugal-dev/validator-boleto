@@ -4,7 +4,7 @@
 <br />
 
 - [] Validar boleto do tipo bancário
-  - [] Validações do boleto  
+  - [X] Validações dos DV 
   - [X] Obter de valor
   - [X] Formatar data
   - [X] Transformar em número do código de barra
