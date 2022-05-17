@@ -6,7 +6,7 @@
 - [] Validar boleto do tipo bancário
   - [] Validações do boleto  
   - [] Calculo de valor
-  - [] Formatar data
+  - [X] Formatar data
   - [X] Transformar em número do código de barra
   - [] Testes unitários
 
