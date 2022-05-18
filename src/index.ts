@@ -1,9 +1,9 @@
 import express, {Request, Response} from 'express'
 
-import {validationTicketBankers} from './validation/bankers/validationBoleto'
-//import {validationTicketConcessionaires} from './validation/concessionaires/validationTicket'
+import { validationBankBoleto } from './validation/bankers/validationBoleto'
+import { validationArrecadaoBoleto } from './validation/arrecadacao/validationBoleto'
 
-import {errorDigitLineFormat, errorLengthFormat} from './errors'
+import { errorDigitLineFormat, errorLengthFormat } from './errors'
 
 const app = express()
 
@@ -18,17 +18,17 @@ app.get('/boleto/:digitLine', async (req: Request, res: Response) => {
     if (formatErrorDigitLine)
         return res.status(400).json(formatErrorDigitLine)
     
+
     if (digitLine.length == 47) {
-        const resultValueBank = validationTicketBankers(digitLine)
+        const resultValueBank = validationBankBoleto(digitLine)
         return res.json(resultValueBank)
     }
 
-/*
     if (digitLine.length == 48) {
-        const resultValueConcessionaires = validationTicketConcessionaires(digitLine)
-        res.json(resultValueConcessionaires)
+        const resultValueConcessionaires = validationArrecadaoBoleto(digitLine)
+        return res.json(resultValueConcessionaires)
     }
-*/
+
 
     return res.json({
         'StatusCode': 400,
