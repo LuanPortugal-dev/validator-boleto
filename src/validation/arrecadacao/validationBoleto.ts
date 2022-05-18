@@ -1,6 +1,6 @@
 import { validatorDate } from './validationDate'
 import { convertBarCode } from './generatorBarCode'
-import { validationDV } from './ValidationDV'
+import { validationDV } from './validationDV'
 
 export function validationArrecadaoBoleto(value: string) {
     const validateDV = validationDV(value)
