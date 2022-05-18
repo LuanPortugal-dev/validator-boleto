@@ -1,6 +1,6 @@
 import { validatorDate } from './validationDate'
 import { validatorAmount } from './validationAmount'
-import { convertBarCode } from './generatorBarCode'
+import { convertBarCode } from './convertBarCode'
 import { validationDV } from './validationDV'
 
 export function validationBankBoleto(digitLine: string) {

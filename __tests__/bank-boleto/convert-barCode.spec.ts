@@ -1,4 +1,4 @@
-import { convertBarCode } from '../../src/validation/bankers/generatorBarCode'
+import { convertBarCode } from '../../src/validation/bankers/convertBarCode'
 
 const DIGIT_LINE: string = '21290001192110001210904475617405975870000002000'
 const BAR_CODE: string = '21299758700000020000001121100012100447561740'
