@@ -1,9 +1,9 @@
 import { validatorDate } from './validationDate'
 import { validatorAmount } from './validationAmount'
-import { generatorBarCode } from './generatorBarCode'
+import { convertBarCode } from './generatorBarCode'
 import { validationDV } from './validationDV'
 
-export function validationTicketBankers(digitLine: string) {
+export function validationBankBoleto(digitLine: string) {
     const validateDV = validationDV(digitLine)
 
     if(!validateDV)
@@ -12,7 +12,7 @@ export function validationTicketBankers(digitLine: string) {
             'ReasonError': 'Invalid verification digits',
         }
 
-    const resultBarCode = generatorBarCode(digitLine)
+    const resultBarCode = convertBarCode(digitLine)
     const resultDate = validatorDate(digitLine)
     const resultAmount = validatorAmount(digitLine)
    
