@@ -1,5 +1,5 @@
 export function errorDigitLineFormat(value: string) {
-    if ( !value.match( (/^[0-9]{47}$/) ) )
+    if ( !value.match( (/^[0-9]{47,48}$/) ) )
         return {
             'StatusCode': 400,
             'ReasonError':'Illegal format found in barcode'
