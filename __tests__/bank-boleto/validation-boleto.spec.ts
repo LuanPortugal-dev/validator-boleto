@@ -1,4 +1,4 @@
-import { validationTicketBankers } from '../../src/validation/bankers/validationBoleto'
+import { validationBankBoleto } from '../../src/validation/bankers/validationBoleto'
 import { errorDigitLineFormat } from '../../src/errors'
 
 interface IDIGIT_LINE {
@@ -35,7 +35,7 @@ const DIGIT_LINE_DV_ERROR: IDIGIT_LINE_ERROR = {
 
 describe('Validating bank boleto', () => {
   it('should validating a valid bank boleto', () => {
-    const barCode = validationTicketBankers(DIGIT_LINE)
+    const barCode = validationBankBoleto(DIGIT_LINE)
 
     expect(barCode).toEqual(DIGIT_LINE_RESULT)
   })
@@ -61,7 +61,7 @@ describe('Validating bank boleto', () => {
 
   it('should not validating a invalid DV', () => {
 
-    expect(validationTicketBankers('31290001192110001210904475617405975870000002000'))
+    expect(validationBankBoleto('31290001192110001210904475617405975870000002000'))
     .toEqual(DIGIT_LINE_DV_ERROR)
   })
 })
