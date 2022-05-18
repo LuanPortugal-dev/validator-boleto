@@ -1,5 +1,5 @@
 import express, {Request, Response} from 'express'
-
+import 'dotenv/config'
 import { validationBankBoleto } from './validation/bankers/validationBoleto'
 import { validationArrecadaoBoleto } from './validation/arrecadacao/validationBoleto'
 
@@ -36,7 +36,8 @@ app.get('/boleto/:digitLine', async (req: Request, res: Response) => {
     })
 })
 
+const port = Number(process.env.PORT) || 8800
 
-app.listen(8080, () => {
-    console.log('Listening at http://localhost:8080/')
+app.listen(port, () => {
+    console.log(`Listening at http://localhost:${port}`)
 })
