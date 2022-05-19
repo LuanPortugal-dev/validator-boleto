@@ -14,9 +14,8 @@
 <br />
 
 - [x]  Validar boleto do tipo convênio
-  - [] Validações do boleto
-  - [] Calculo de valor
-  - [X] Formatar data
+  - [X] Validações do boleto
+  - [X] Calculo de valor
   - [X] Transformar em número do código de barra
   - [] Testes unitários
 
