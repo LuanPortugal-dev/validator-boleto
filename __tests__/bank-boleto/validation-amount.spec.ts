@@ -17,7 +17,7 @@ describe('Calculate amount', () => {
     expect(amount).not.toBe(fakeAmount)
   })
 
-  it('1 ten centavos', () => {
+  it('1 ten cents', () => {
     const digitLine: string = '21290001192110001210904475617405975870000000002'
 
     const amount: string = validatorAmount(digitLine)
@@ -25,7 +25,7 @@ describe('Calculate amount', () => {
     expect(amount).toBe('0,02')
   })
 
-  it('2 ten centavos', () => {
+  it('2 ten cents', () => {
     const digitLine: string = '21290001192110001210904475617405975870000000020'
 
     const amount: string = validatorAmount(digitLine)
