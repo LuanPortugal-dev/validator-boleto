@@ -17,7 +17,7 @@
   - [X] Validações do boleto
   - [X] Calculo de valor
   - [X] Transformar em número do código de barra
-  - [] Testes unitários
+  - [X] Testes unitários
 
 <br />
 
