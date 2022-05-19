@@ -1,23 +1,17 @@
-import { validatorDate } from './validationDate'
-import { convertBarCode } from './generatorBarCode'
-import { validationDV } from './validationDV'
+import { getConcessionariaGroups } from './generationGroups'
+import { formatAmount } from './validationAmount'
+import { convertBarCode } from './convertBarCode'
+import { validateFourFields } from './validation4Fields'
 
 export function validationArrecadaoBoleto(value: string) {
-    const validateDV = validationDV(value)
-
-    if(!validateDV)
-        return {
-            'StatusCode': 400,
-            'ReasonError': 'Invalid verification digits',
-        }
+    const resultGroups= getConcessionariaGroups(value)
+    const resultValidationDv = validateFourFields(value)
 
     const resultBarCode = convertBarCode(value)
-    const resultDate = validatorDate(value)
-    //const resultAmount = validatorAmount(value)
+    const amount = formatAmount(resultGroups.value)
 
     return {
         'barCode': resultBarCode,
-        'amount': 'resultAmount',
-        'expirationDate': resultDate
+        'amount': amount,
     }
 }
