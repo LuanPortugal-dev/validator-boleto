@@ -51,4 +51,9 @@ Para instalar as dependências, no teu console de preferência:
   yarn test
   yarn coverage
   ```
+> ## App feito deploy com docker na aws EC2 ubuntu:
+<br />
 
+  ```bash
+  http://18.230.20.149:8080/boleto/21290001192110001210904475617405975870000002000
+  ```
